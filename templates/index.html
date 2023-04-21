@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Web Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='my-script.js') }}"></script>
+    <!-- <script src="//d3js.org/d3.v4.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Your HTML content here -->
+    <form action="/update" name="form1" method="POST">
+        <input type="text" name="text">
+    </form> 
+    <button id="update-btn" onclick="updateData()" type="submit">Update</button>
+    <div id="data-container">Initial data</div>
+
+    <div>
+        <canvas id="chart"></canvas>
+        <button type="submit" onclick="makeChart({{ chart_df }})">Chart!</button>
+    </div>
+
+</body>
+</html>
