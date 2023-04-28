@@ -1,4 +1,21 @@
-{% for i in range(user_input) %}
-        <p>{{i}} <h1>THIS IS UPDATED TEMPLATE</h1></p>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script  type = "text/javascript" src= {{ cdn_js | safe }} ></script>
+</head>
+<body>
+        <p>Update Template</p>
+<div id="plot-div">
+        <p>In the div</p>
+        {{ plot_js | safe}}
+        {{ plot_div | safe }}
+</div>
+</body>
+</html>
+
+
+
+
+
+
 

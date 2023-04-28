@@ -9,6 +9,7 @@ function updateData() {
             // Update the data on the web page
             var dataContainer = document.getElementById('data-container');
             dataContainer.innerHTML = xhr.responseText;
+            console.log(xhr.responseText)
         }
     };
     xhr.onerror = function () {
